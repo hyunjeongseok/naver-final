@@ -1,0 +1,91 @@
+@import './reset.css';
+@import './common.css';
+
+
+/* header - 공통 */
+.header .group-flex{ position: relative; width: 1130px; margin: 0 auto; height: 160px; padding: 0 30px;}
+
+/* header - 개별 */
+.header .logo-area{position: relative; height: 100%;}
+.header .logo-area .logo{ position: absolute; top: 50%; left: -9px; margin-top: -32px; }
+.header .logo-area a{ display: block; }
+.header .logo-area a::before{ content: ''; display: inline-block; width: 222px; height: 52px; background-position: 0 -158px; vertical-align: top; }
+
+.header .search-area{ position: absolute; top: 50%; left: 268px; margin-top: -28px; }
+.header .search-area .inner{ position: relative; width: 582px; height: 52px; border: 2px solid #19ce60; /* webkit 엔진 브라우저 > 옛날소스 */ /* -webkit-border-radius: 2px; */ border-radius: 2px; }
+.header .search-area .input-text{ width: 444px; height: 24px; padding: 13px 15px; margin: 1px; background-color: #fff; font-size: 18px; line-height: 24px; color: #000; font-weight: 700; outline: 0; }
+.header .search-area .btn-sumit{ position: absolute; top: 0; bottom: 0; right: -2px; width: 56px; background: #19ce60; }
+.header .search-area .btn-sumit::after{ content: ''; display: inline-block; width: 22px; height: 22px; vertical-align: top; background-position: -420px 0; }
+
+.header .service-area{ position: absolute; top: 12px; right: 27px; display: flex; }
+.header .service-area .bar{ width: 1px; height: 10px; background: #ccc; margin: 3px 7px; }
+.header .service-area .link-start::after{ content: ''; display: inline-block; width: 26px; height: 26px; vertical-align: top; background-position: -308px -345px; margin: -3px 0 0 3px; }
+.header .service-area .link-junior::after{ content: ''; display: inline-block; vertical-align: top; width: 60px; height: 10px; background-position: -262px -330px; margin: 3px; }
+.header .service-area .link-bin::after{ content: ''; display: inline-block; vertical-align: top; width: 34px; height: 11px; background-position: -369px -299px; margin: 3px 3px 2px; }
+
+/* gnb */
+.gnb{ border-top: 1px solid #e4e8eb; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%); }
+.gnb .gnb-inner{ width: 1130px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+
+.gnb .gnb-list{ position: relative; display: flex; font-size: 15px; font-weight: bold; padding: 11px 0; line-height: 30px; gap: 12px; color: #19ce60; }
+.gnb .gnb-list.bk{color: inherit; padding-left: 12px; }
+
+
+/* gnb - 개별 */
+.gnb .gnb-list .mail::before{ content: ''; display: inline-block; width: 21px; height: 21px; background-position: -420px -73px; background-repeat: no-repeat; vertical-align: top; margin: 3px 9px 0 0; }
+.gnb .gnb-list .live::before{ content: ''; display: block; width: 54px; height: 20px; background-position: -202px -299px; margin: 5px 0; }
+.gnb .gnb-list .play::before{ content: ''; display: inline-block; width: 12px; height: 14px; background-position: -444px -49px; margin: 7px 2px 0 0; }
+.gnb .btn-more{ display: block; margin-right: auto; font-size: 13px; line-height: 30px; color: #202020; margin-left: 17px; }
+.gnb .btn-more::after{ content: ''; display: inline-block; width: 11px; height: 7px; background-position: -444px -339px; margin-left: 7px; vertical-align: 2px; }
+
+/* header - 날씨 */
+.gnb .weather-area .weather-wrap{ display: flex; padding: 12px 0 11px; font-size: 13px; line-height: 29px; vertical-align: top; }
+.gnb .weather-area .current-box::before{ content: ''; display: inline-block; width: 29px; height: 29px; margin-right: 9px; background-position: 0 -62px; background-repeat: no-repeat; vertical-align: top; }
+.gnb .weather-area .current-box strong{ font-size: 15px; font-weight: bold; vertical-align: top; }
+.gnb .weather-area .current-box .state{ margin-left: 5px; }
+
+.gnb .weather-area .degree-box{ margin-left: 9px; }
+.gnb .weather-area .degree-box .min{ color: #2586ee; }
+.gnb .weather-area .degree-box .max{ color: #e9564a; }
+.gnb .weather-area .degree-box .max::before{ content: ''; display: inline-block; width: 5px; height: 11px; background-position: -444px -392px; margin: 0 3px; vertical-align: -1px; }
+.gnb .weather-area .location{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; padding-left: 9px; font-size: 12px; color: grey; text-align: right; }
+
+
+/* container */
+.container{ width: 1130px; margin: 0 auto; display: flex; justify-content: space-between; padding: 20px 30px; }
+
+
+/* footer - 공통 */
+.footer{ background-color: #fafbfc; border-top: 1px solid #e4e8eb; }
+.footer-inner{ width: 1130px; padding: 0 30px 92px; margin: 0 auto; }
+
+/* footer - 개별 */
+.footer .ad-area{ display: flex; justify-content: space-between; gap: 40px; padding: 24px 0; border-bottom: 1px solid #e4e8eb; }
+.footer .ad-link{ display: flex; }
+.footer .ad-area .thumb-box{ width: 160px; height: 86px; }
+.footer .ad-area .text-box{ padding: 2px 2px 0 16px; width: 172px; }
+.footer .ad-area .text-box em{font-weight: 700; color: #58c464;}
+.footer .ad-area .text-box strong{display: block; margin-top: 6px; font-size: 13px;}
+.footer .ad-area .text-box p{margin-top: 8px; line-height: 18px;}
+
+.footer .notice-area{ display: flex; justify-content: space-between; border-bottom: 1px solid #e4e8eb; padding: 16px 0 15px; }
+.footer .notice-area a{ display: block; }
+.footer .notice-area a:last-child::after{ content: ''; display: inline-block; width: 8px; height: 12px; background-position: -444px -268px; background-repeat: no-repeat; vertical-align: top; margin-left: 10px; vertical-align: -2px; }
+
+.footer .aside-area{ display: flex; justify-content: space-between; border-bottom: 1px solid #e4e8eb; }
+.footer .aside-area .partner-wrap{ padding: 20px 0; }
+.footer .aside-area .partner-box{ display: flex; margin-bottom: 10px; }
+.footer .aside-area .partner-box .title{ font-weight: 700; width: 87px; }
+.footer .aside-area .partner-box ul{ display: flex; }
+.footer .aside-area .partner-box ul a{ color: #777; }
+.footer .aside-area .partner-box ul li+li::before{ margin: 0 8px; content: ""; display: inline-block; width: 1px; height: 11px; background-color: #e4e8eb; vertical-align: -1px; margin: 0 8px; }
+.footer .aside-area .service-wrap{ padding: 28px 0; display: flex; gap: 50px; }
+.footer .aside-area .service-box{ display: flex; align-items: center; }
+.footer .aside-area .service-box .title{ display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-top: 2px; font-weight: bold; }
+.footer .aside-area .service-box a{ display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-top: 2px; color: grey; }
+.footer .aside-area .service-box .service-logo{ width: 48px; height: 48px; margin-left: 12px; }
+
+.footer .policy-area{ padding-top: 25px; display: flex; }
+.footer .policy-list{ display: flex; }
+.footer .policy-list li+li::before{ margin: 0 8px; content: ""; display: inline-block; width: 1px; height: 11px; background-color: #e4e8eb; vertical-align: -1px; margin: 0 8px; }
+.footer .policy-area .corp{ display: block; margin-left: 17px; font-weight: 700; }

@@ -1,0 +1,107 @@
+/* @blind
+    스크린리더기에서 읽힐 내용 기입 후 영역에서 보이지 않게 하기 위함.
+ */
+.blind{
+    position: absolute;
+    width: 1px;height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+
+
+.wrapper{
+    min-width: 1190px;
+}
+
+.thumb-box{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.thumb-box::after{
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border: 1px solid #000;
+    opacity: 0.04;
+}
+
+strong{
+    font-weight: bold;
+}
+
+.hover:hover strong{text-decoration: underline;}
+.hover:hover img{scale: 1.05; transition: .3s;}
+
+
+/* sp-bg 공용(1) */
+.header .logo-area a::before,
+.header .service-area a::after,
+.gnb .gnb-list .mail::before,
+.gnb .gnb-list .live::before,
+.gnb .gnb-list .play::before,
+.gnb .btn-more::after,
+.gnb .weather-area .degree-box .max::before,
+.sc-news .group-issue .link-media::after,
+.sc-login .link-login::before,
+.sc-sidenews .nav-wrap .btn-nav::after,
+.sc-sidenews .nav-wrap .btn-nav.next::after,
+.sc-news .group-title .set-area .btn-set::after,
+.header .search-area .btn-sumit::after,
+.sc-themecast .group-title .info-area .btn-set::before,
+.sc-themecast .topstory1 .btn-play,
+.sc-themecast .topstory2 .btn-play,
+.sc-themecast .middlestory .btn-play,
+.sc-shop .group-news .news-item::before,
+.group-theme .title-area .title::after,
+.group-category .btn-prev .ic-btn,
+.group-category .btn-next .ic-btn,
+.sc-themecast .middlestory .date::before,
+.btn_more_wrap .btn_more .ic_more,
+.sc-login .sub-area .link-id::before,
+.sc-login .sub-area .link-join::before,
+.sc-news .group-title .link-title::before,
+.sc-news .group-title .link-title::after,
+.sc-news .group-media .btn-prev .ic-btn,
+.sc-news .group-media .btn-next .ic-btn,
+.footer .notice-area a:last-child::after
+    {
+    background-image: url('../images/sp-bg.png');
+    background-repeat: no-repeat;
+    background-size: 457px auto;
+}
+
+
+/* sp-bg 공용(2) */
+.sc-shop .group-title .trend_shop::before,
+.sc-shop .group-title .trend_shop::after,
+.group-event .event-title .link-logo::before,
+.group-event .thumb-box:last-child::before,
+.group-event .event-thumb .ic-plus,
+.group-goods .shop-page .btn.prev::before,
+.group-goods .shop-page .btn.next::before,
+.pagination .nav-wrap .btn-nav.prev::before,
+.pagination .nav-wrap .btn-nav.next::before
+    {
+    background-image: url('../images/sp-bg2.png');
+    background-repeat: no-repeat;
+    background-size: 107px 101px;
+}
+
+
+/* sp-bg 공용(3) */
+.group-theme .midia-info .ad-mark
+    {
+    background-image: url('../images/sp-bg3.png');
+    background-repeat: no-repeat;
+    background-size: 100px 90px;
+}
+
+
+/* sp-bg 공용(4) -날씨 */
+.gnb .weather-area .current-box::before{
+    background-image: url('../images/sp-bg4.png');
+    background-repeat: no-repeat;
+    background-size: 215px;
+}
